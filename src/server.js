@@ -3,8 +3,8 @@ var Hapi = require('hapi');
 var server = new Hapi.Server();
 
 server.connection({
-    host: 'localhost',
-    port: 8000
+  host: 'localhost',
+  port: 8000
 });
 
 // TODO: add cors
@@ -17,10 +17,10 @@ server.connection({
 server.route(require('./routes'));
 
 // Start the server
-server.start(function() {
-    // TODO: Change this log to use some real log tool
-    // TODO: try using server.log ?!?
-    console.log('Server started at: ' + server.info.uri);
+server.start(function startServer() {
+  // TODO: Change this log to use some real log tool
+  // TODO: try using server.log ?!?
+  console.log('Server started at: ' + server.info.uri);
 
 });
 
