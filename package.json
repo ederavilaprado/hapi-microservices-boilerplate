@@ -15,7 +15,10 @@
   ],
   "author": "Eder Ávila Prado <prado.eder@gmail.com> https://twitter.com/ederavilaprado",
   "license": "MIT",
-  "repository": "https://github.com/ederavilaprado/hapi-microservices-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ederavilaprado/hapi-microservices-boilerplate"
+  },
   "dependencies": {
     "hapi": "^8.4.0",
     "lodash": "^3.6.0",
