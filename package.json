@@ -13,7 +13,7 @@
     "microservices",
     "boilerplate"
   ],
-  "author": "Eder Ávila Prado @ederavilaprado <prado.eder@gmail.com>",
+  "author": "Eder Ávila Prado <prado.eder@gmail.com> https://twitter.com/ederavilaprado",
   "license": "MIT",
   "repository": "https://github.com/ederavilaprado/hapi-microservices-boilerplate",
   "dependencies": {
