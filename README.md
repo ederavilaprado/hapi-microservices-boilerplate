@@ -7,3 +7,6 @@ Anotations...
 
 // Configure json format on sublime to end with newline
 // Install editorconfig for sublime
+
+
+https://gist.github.com/andreypopp/5588256

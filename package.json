@@ -21,7 +21,9 @@
   },
   "dependencies": {
     "hapi": "^8.4.0",
+    "js-yaml": "^3.2.7",
     "lodash": "^3.6.0",
+    "nconf": "^0.7.1",
     "sequelize": "^2.0.5"
   },
   "devDependencies": {
