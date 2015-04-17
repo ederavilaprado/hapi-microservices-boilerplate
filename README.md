@@ -9,4 +9,6 @@ Anotations...
 // Install editorconfig for sublime
 
 
-https://gist.github.com/andreypopp/5588256
+
+
+https://github.com/sequelize/gulp-sequelize
