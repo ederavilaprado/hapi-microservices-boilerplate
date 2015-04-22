@@ -2,6 +2,7 @@ var Hapi = require('hapi');
 var yaml = require('js-yaml');
 var nconf = require('nconf');
 var path = require('path');
+var color = require('colors');
 
 (function loadConfigData() {
   // TODO: document the config example, first the env example. i.e.: server__port=3000
@@ -47,12 +48,26 @@ server.connection({
 // Add all routes
 server.route(require('./routes'));
 
-// Start the server
-server.start(function startServer() {
-  // TODO: Change this log to use some real log tool
-  // TODO: try using server.log ?!?
-  console.log('Server started at: ' + server.info.uri);
+if (nconf.get('NODE_ENV') === 'production') {
+  server.start(function serverStart() {
+    // TODO: Change this log to use some real log tool
+    // TODO: try using server.log ?!?
+    console.log('Server started at: ' + server.info.uri.cyan);
+  });
+} else {
+  var Blipp = require('blipp');
 
-});
+  server.register(Blipp, function(err) {
+    if (err) {
+      console.log('Faiel to start server with Blipp plugin. Err.: ' + err.stack);
+      process.exit(1);
+    }
+    server.start(function serverStart() {
+      // TODO: Change this log to use some real log tool
+      // TODO: try using server.log ?!?
+      console.log('Server started...');
+    });
+  });
+}
 
 module.exports = server;

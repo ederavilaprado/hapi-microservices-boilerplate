@@ -12,3 +12,5 @@ Anotations...
 
 
 https://github.com/sequelize/gulp-sequelize
+
+https://github.com/danielb2/blipp
