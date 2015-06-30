@@ -1,16 +1,21 @@
-var routes = [{
+var controller = require('../controllers/example');
+
+var r = [];
+
+
+r.push({
   method: 'GET',
   path: '/hello',
-  handler: function hello(request, reply) {
-    reply('hello world');
-  }
-}, {
+  handler: controller.hello
+});
+
+r.push({
   method: 'GET',
   path: '/test',
-  handler: function test(request, reply) {
-    reply('testHere');
-  }
-}];
+  handler: controller.test
+});
 
-module.exports.basePath = '/example';
-module.exports.routes = routes;
+module.exports = {
+  basePath: '/example',
+  routes: r
+}

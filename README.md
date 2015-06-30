@@ -14,3 +14,8 @@ Anotations...
 https://github.com/sequelize/gulp-sequelize
 
 https://github.com/danielb2/blipp
+
+
+##TODO
+
+- Remover o gulp e adicionar o grunt?!
